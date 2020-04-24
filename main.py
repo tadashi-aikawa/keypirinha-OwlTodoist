@@ -36,7 +36,7 @@ def convert2todoist(calendar_summary: str, info) -> str:
     )
     if not m:
         return None
-    return f":calendar: {m['title']} ({m['start']}-{m['end']}) {m['month']}/{m['day']} @{behindMinutes(m['start'], m['end'])}分".translate(non_bmp_map)
+    return f" {m['title']} ({m['start']}-{m['end']}) {m['month']}/{m['day']} @{behindMinutes(m['start'], m['end'])}分".translate(non_bmp_map)
 
 
 class OwlTodoist(kp.Plugin):
